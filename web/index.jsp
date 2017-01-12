@@ -59,8 +59,8 @@
                             <div class="share-buttons">SHARE</div>
                         </div>
                         <div class="other-buttons">
-                            <a class="download-button">DOWNLOAD</a>
-                            <a class="download-button">RSS</a>
+                            <a class="button" href=<%= episode.getMP3Link() %>>DOWNLOAD</a>
+                            <a class="button">RSS</a>
                         </div>
                     </div>
                 </div>

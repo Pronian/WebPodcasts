@@ -51,7 +51,7 @@ public class Episode
         StringBuilder sbImageLink = new StringBuilder();
         sbImageLink.append("\"background: url(podfiles/podcast-");
         sbImageLink.append(getId());
-        sbImageLink.append(".jpg), no-repeat, center, center;\"");
+        sbImageLink.append(".jpg) no-repeat center center;\"");
 
         return sbImageLink.toString();
     }

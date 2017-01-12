@@ -9,16 +9,22 @@ html{
 a{
     text-decoration: none;
     color: white;
+    transition: all .2s ease-in-out;
+}
+a:active{
+    transform: scale(1.1);
+}
+
+@media screen and (max-device-width: 700px) {
+    body{
+        width: 700px;
+    }
 }
 
 .header-outer-container{
     box-shadow: 0 0 100px 5px #000 inset;
-    object-fit: scale-down;
-    object-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
 }
+
 .header-container{
     background: rgba(15, 15, 20, 0.7);
     height: 50rem;
@@ -36,6 +42,9 @@ a{
     padding: 1.3rem;
     display: inline-flex;
     justify-content: center;
+}
+.menuitem:hover{
+    text-decoration: underline;
 }
 .episode-container{
     display: flex;
@@ -61,6 +70,8 @@ a{
 .episodes-list{
     max-width: 1000px;
     margin: auto;
+    border-left: transparent solid 10px;
+    border-right: transparent solid 10px;
 }
 
 .episodes-list-container{
@@ -105,6 +116,23 @@ h3 {
 .header nav{
     margin: 0;
 }
+
+a.button{
+    border-radius: 28px;
+    font-size: 20px;
+    background: rgba(230, 74, 25, 0.7);
+    padding: 5px 15px;
+    text-decoration: none;
+    transition: all .2s ease-in-out;
+}
+a.button:hover {
+    background: rgb(230, 74, 25);
+    text-decoration: none;
+}
+a.button:active{
+    transform: scale(1.1);
+}
+
 body{
     margin: 0 auto;
     background: rgb(15, 15, 20);
