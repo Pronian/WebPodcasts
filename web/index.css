@@ -15,14 +15,24 @@ a:active{
     transform: scale(1.1);
 }
 
-@media screen and (max-device-width: 700px) {
-    body{
-        width: 700px;
+@media handheld, only screen  and (max-width: 750px) {
+    .episode-row{
+        flex-direction: column;
+    }
+    .episode-date{
+        margin: 5px;
+    }
+    .share-buttons{
+        margin: 10px;
+    }
+    .header-outer-container{
+        background-size: contain;
     }
 }
 
 .header-outer-container{
     box-shadow: 0 0 100px 5px #000 inset;
+    background-size: 100%;
 }
 
 .header-container{
@@ -61,7 +71,8 @@ a:active{
 }
 .episode-info{
     margin: 0 10px;
-    width: 80rem;
+    max-width: 80rem;
+    max-height: 46rem;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -92,8 +103,23 @@ a:active{
     background: rgba(255,255,255,0.1);
 }
 
+.small-title{
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.small-date{
+    font-size: 14px;
+    color: rgba(255,255,255,0.6);
+    margin-bottom: 5px;
+}
+.small-description{
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+}
+
 h2 {
     font-size: 32px;
+    margin: 10px;
 }
 
 h3 {
@@ -111,7 +137,7 @@ h3 {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 1.2rem 0;
+    margin: 10px;
 }
 .header nav{
     margin: 0;

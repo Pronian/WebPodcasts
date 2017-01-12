@@ -27,9 +27,19 @@
 <html>
     <head>
         <title>The Crate and Crowbar Podcast: <%=episode.getName()%></title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index.css">
+        <script type="text/javascript" src="clamp.js"></script>
+        <script type="text/javascript">
+            function clampSingle(item, index) {
+                $clamp(item, {clamp: '133px'});
+            }
+            function clampDescriptions() {
+                [].forEach.call(document.getElementsByClassName("small-description"), (clampSingle));
+            };
+        </script>
     </head>
-    <body>
+    <body onload="clampDescriptions()" onresize="clampDescriptions()">
         <div class="header-outer-container" style=<%=episode.getImageLinkString()%>>
             <div class="header-container">
                 <header class="header">
@@ -69,12 +79,20 @@
         <div class="episodes-list">
             <div><h3>Latest episodes</h3></div>
             <div class="episodes-list-container">
-                <% for(int i = 0; i < episodes.size(); i++) {%>
-                    <a href=<%="index.jsp?ep="+episodes.get(i).getId()%>>
-                        <div class="episodes-list-item">
-                            <%=episodes.get(i).getName()%>
+                <% for (Episode episode1 : episodes) {%>
+                <a href=<%="index.jsp?ep=" + episode1.getId()%>>
+                    <div class="episodes-list-item">
+                        <div class="small-title">
+                            <%=episode1.getName()%>
                         </div>
-                    </a>
+                        <div class="small-date">
+                            <%=episode1.getFormatedPostedOn()%>
+                        </div>
+                        <div class="small-description">
+                            <%=episode1.getDescription()%>
+                        </div>
+                    </div>
+                </a>
                 <% } %>
             </div>
         </div>
