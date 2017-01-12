@@ -1,0 +1,75 @@
+html{
+    font-family: "Roboto Slab", "Halvenetica", "Verdana", "Ariel" ;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.header-outer-container{
+    box-shadow: 0 0 100px 5px #000 inset;
+    object-fit: scale-down;
+    object-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.header-container{
+    background: rgba(15, 15, 20, 0.7);
+    height: 50rem;
+}
+.header{
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+.menuitem{
+    list-style: none;
+    color: orangered;
+    font-size: 20px;
+    text-decoration: none;
+    padding: 1.3rem;
+    display: inline-flex;
+    justify-content: center;
+}
+.episode-container{
+    display: flex;
+    justify-content: center;
+    color: white;
+    height: inherit;
+}
+.episode-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    padding: 0rem
+}
+.episode-info{
+    width: 80rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+h2 {
+    font-size: 32px;
+}
+.player-container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.player{
+    width: 80%;
+}
+.other-buttons{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 1.2rem 0;
+}
+.header nav{
+    margin: 0;
+}
+body{
+    margin: 0 auto;
+    background: rgb(15, 15, 20);
+}
