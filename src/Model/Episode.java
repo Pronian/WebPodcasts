@@ -4,6 +4,9 @@ package Model;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+/**
+ * Stores podcast episode data
+ */
 public class Episode
 {
     private int id;

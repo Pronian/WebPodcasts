@@ -2,6 +2,11 @@
 <%@ page import="Model.Episode" %>
 <%@ page import="Model.MySQLConn" %>
 <%@ page import="java.util.ArrayList" %>
+<%@ page import="java.util.List" %>
+<%@ page import="Model.Feed" %>
+<%@ page import="java.util.Date" %>
+<%@ page import="Logic.Utilities" %>
+<%@ page import="Logic.PodcastRSSFeedWriter" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%
     Episode episode = null;
@@ -35,11 +40,11 @@
         <script type="text/javascript">stLight.options({publisher: "25c08668-72b3-4217-8706-d1d6df6afafd", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
         <script type="text/javascript" src="clamp.js"></script>
         <script type="text/javascript">
-            function clampSingle(item, index) {
-                $clamp(item, {clamp: '133px'});
-            }
+            function clampSingleDesc(item, index) {$clamp(item, {clamp: '133px'});}
+            function clampSingleTitl(item, index) {$clamp(item, {clamp: '45px'});}
             function clampDescriptions() {
-                [].forEach.call(document.getElementsByClassName("small-description"), (clampSingle));
+                [].forEach.call(document.getElementsByClassName("small-title"), (clampSingleTitl));
+                [].forEach.call(document.getElementsByClassName("small-description"), (clampSingleDesc));
             };
         </script>
     </head>
@@ -79,7 +84,7 @@
                         </div>
                         <div class="other-buttons">
                             <a class="button" href=<%= episode.getMP3Link() %>>DOWNLOAD</a>
-                            <a class="button">RSS</a>
+                            <a class="button" href="podfiles/rss.xml">RSS</a>
                         </div>
                     </div>
                 </div>
@@ -111,4 +116,13 @@
             </div>
         </div>
     </body>
+<%
+//    MySQLConn sqlconn = new MySQLConn();
+//    List<Episode> eps = sqlconn.getLatestEpisode(100);
+//    Date date = new Date();
+//    Feed feed = new Feed("The Car and Co-car NotCast", "", "A podcast about stuff", "en-US", "No right", Utilities.DateToPubDate(date), "John", "http://192.168.0.102:8080/Web_Podcasts_war_exploded/index.jsp?ep=", "http://192.168.0.102:8080/Web_Podcasts_war_exploded/");
+//    feed.setEntries(eps);
+//    PodcastRSSFeedWriter rssFeedWriter = new PodcastRSSFeedWriter(feed,"E:\\Downloads\\podfiles\\podfiles\\rss.xml");
+//    rssFeedWriter.write();
+%>
 </html>
