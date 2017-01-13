@@ -29,6 +29,9 @@
         <title>The Crate and Crowbar Podcast: <%=episode.getName()%></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="index.css">
+        <script type="text/javascript">var switchTo5x=true;</script>
+        <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
+        <script type="text/javascript">stLight.options({publisher: "25c08668-72b3-4217-8706-d1d6df6afafd", doNotHash: false, doNotCopy: false, hashAddressBar: false});</script>
         <script type="text/javascript" src="clamp.js"></script>
         <script type="text/javascript">
             function clampSingle(item, index) {
@@ -66,7 +69,12 @@
                         <div class="episode-row">
                             <div class="episode-description"><%=episode.getDescription()%>
                             </div>
-                            <div class="share-buttons">SHARE</div>
+                            <div class="share-buttons">
+                                <span class='st_reddit_large' displayText='Reddit'></span>
+                                <span class='st_facebook_large' displayText='Facebook'></span>
+                                <span class='st_twitter_large' displayText='Tweet'></span>
+                                <span class='st_email_large' displayText='Email'></span>
+                            </div>
                         </div>
                         <div class="other-buttons">
                             <a class="button" href=<%= episode.getMP3Link() %>>DOWNLOAD</a>

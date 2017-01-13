@@ -121,6 +121,11 @@ h3 {
 .player{
     width: 80%;
 }
+.share-buttons{
+    margin-left: 20px;
+    height: 80px;
+    width: 24rem;
+}
 .other-buttons{
     display: flex;
     justify-content: space-around;
@@ -166,6 +171,8 @@ body{
     }
     .share-buttons{
         margin: 10px;
+        height: auto;
+        width: auto;
     }
     .header-outer-container{
         background-size: contain;
