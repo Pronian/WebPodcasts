@@ -124,7 +124,7 @@ h3 {
 .share-buttons{
     margin-left: 20px;
     height: 80px;
-    width: 24rem;
+    width: 27rem;
 }
 .other-buttons{
     display: flex;
@@ -155,10 +155,23 @@ a.button:active{
 body{
     margin: 0 auto;
     background: rgb(15, 15, 20);
+    min-height: 100%;
 }
 
 .test{
     margin: auto;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    font-size: 11px;
+    margin-top: 40px;
+    background: rgba(0,0,0,0.25);
+}
+.footer-text{
+    padding: 15px 0;
+    color: rgba(255,255,255,0.3);
 }
 
 @media handheld, only screen  and (max-width: 750px) {

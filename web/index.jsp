@@ -21,13 +21,14 @@
     {
         episode = conn.getLatestEpisode();
     }
-    ArrayList<Episode> episodes = conn.getLatestEpisode(6);
+    ArrayList<Episode> episodes = conn.getLatestEpisode(4);
     conn.CloseConnection();
 %>
 <html>
     <head>
         <title>The Crate and Crowbar Podcast: <%=episode.getName()%></title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
         <link rel="stylesheet" href="index.css">
         <script type="text/javascript">var switchTo5x=true;</script>
         <script type="text/javascript" src="http://w.sharethis.com/button/buttons.js"></script>
@@ -102,6 +103,11 @@
                     </div>
                 </a>
                 <% } %>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="footer-text">
+                Site desing and back-end: Ivan Georgiev (ivangeorgiev4360@gmail.com)
             </div>
         </div>
     </body>
