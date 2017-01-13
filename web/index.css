@@ -135,6 +135,12 @@ h3 {
 .header nav{
     margin: 0;
 }
+.selected{
+    background: rgba(230, 74, 25,0.3);
+}
+.selected:hover{
+    background: rgba(230, 74, 25,0.5);
+}
 
 a.button{
     border-radius: 28px;
