@@ -1,6 +1,6 @@
 <div class="footer">
     <div class="footer-text">
-        Site desing and back-end: Ivan Georgiev (ivangeorgiev4360@gmail.com)
+        Site design and back-end: Ivan Georgiev (ivangeorgiev4360@gmail.com)
     </div>
     <div class="footer-text clickable">
         <a onclick="document.getElementById('LoginDialog').style.display='block'">Admin Login</a>

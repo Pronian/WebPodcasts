@@ -4,6 +4,8 @@ html{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    min-height: 100%;
+    position: relative;
 }
 
 a{
@@ -159,9 +161,8 @@ a.button:active, button:active{
 }
 
 body{
-    margin: 0 auto;
+    margin: 0 0 80px;
     background: rgb(15, 15, 20);
-    min-height: 100%;
 }
 
 .test{
@@ -174,6 +175,11 @@ body{
     font-size: 11px;
     margin-top: 40px;
     background: rgba(0,0,0,0.25);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow:hidden;
 }
 .footer-text{
     padding: 15px 0;
