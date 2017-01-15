@@ -51,7 +51,7 @@
         ;
     </script>
 </head>
-<body onload="clampDescriptions()" onresize="clampDescriptions()">
+<body onpageshow="clampDescriptions()" onresize="clampDescriptions()">
 <div class="header-outer-container" style=<%=episode.getImageLinkString()%>>
     <div class="header-container">
         <%@include file="header.jsp"%>

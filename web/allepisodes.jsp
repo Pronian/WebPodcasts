@@ -31,7 +31,7 @@
         ;
     </script>
 </head>
-<body onload="clampDescriptions()" onresize="clampDescriptions()">
+<body onpageshow="clampDescriptions()" onresize="clampDescriptions()">
 <%@include file="header.jsp"%>
 <div class="episodes-list">
     <div><h3>All episodes</h3></div>
