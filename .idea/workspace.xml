@@ -2,7 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d878320f-2cb5-498d-825f-49c893078087" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.css" afterPath="$PROJECT_DIR$/web/index.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/Utilities.java" afterPath="$PROJECT_DIR$/src/Logic/Utilities.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/MySQLConn.java" afterPath="$PROJECT_DIR$/src/Model/MySQLConn.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
     </list>
     <ignored path="Web-Podcasts.iws" />
@@ -33,22 +36,49 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.jsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/index.jsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="442">
-              <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
+            <state relative-caret-position="-924">
+              <caret line="43" column="162" selection-start-line="43" selection-start-column="162" selection-end-line="43" selection-end-column="162" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="index.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web/index.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
+            <state relative-caret-position="17">
               <caret line="141" column="36" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Utilities.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Logic/Utilities.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MySQLConn.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Model/MySQLConn.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="467">
+              <caret line="178" column="58" selection-start-line="178" selection-start-column="58" selection-end-line="178" selection-end-column="58" />
+              <folding>
+                <marker date="1484495078205" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
+                <marker date="1484495078205" expanded="true" signature="2408:2505" ph="SELECT `id`,... episodes" />
+                <marker date="1484495078205" expanded="true" signature="3674:3784" ph="SELECT `id`,... episodes" />
+                <marker date="1484495078205" expanded="true" signature="4767:4828" ph="SELECT `id`,... users" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -79,15 +109,16 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/70ebc45e-0e23-427a-bc03-c79ac30321ef/console.sql" />
         <option value="$PROJECT_DIR$/web/WEB-INF/web.xml" />
         <option value="$PROJECT_DIR$/web/WEB-INF/glassfish-web.xml" />
-        <option value="$PROJECT_DIR$/src/Model/MySQLConn.java" />
         <option value="$PROJECT_DIR$/web/clamp.js" />
         <option value="$PROJECT_DIR$/src/Model/Episode.java" />
         <option value="$PROJECT_DIR$/src/Logic/PodcastRSSWriter.java" />
         <option value="$PROJECT_DIR$/src/Model/Feed.java" />
         <option value="$PROJECT_DIR$/src/Logic/PodcastRSSFeedWriter.java" />
-        <option value="$PROJECT_DIR$/src/Logic/Utilities.java" />
-        <option value="$PROJECT_DIR$/web/index.jsp" />
         <option value="$PROJECT_DIR$/web/index.css" />
+        <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/src/Logic/Utilities.java" />
+        <option value="$PROJECT_DIR$/src/Model/MySQLConn.java" />
+        <option value="$PROJECT_DIR$/src/Model/User.java" />
       </list>
     </option>
   </component>
@@ -212,9 +243,9 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -756,11 +787,12 @@
       <workItem from="1481817790284" duration="1197000" />
       <workItem from="1484227065987" duration="28782000" />
       <workItem from="1484310631017" duration="22719000" />
+      <workItem from="1484402317888" duration="5503000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76567000" />
+    <option name="totallyTimeSpent" value="82070000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -773,11 +805,11 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -838,7 +870,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="18" />
+      <option name="time" value="19" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -884,10 +916,10 @@
         <state relative-caret-position="1428">
           <caret line="84" column="0" selection-start-line="84" selection-start-column="0" selection-end-line="84" selection-end-column="0" />
           <folding>
-            <element signature="e#2283#2292#0" expanded="true" />
-            <marker date="1484239440947" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="2436:2533" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="3789:3899" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="2408:2505" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="3674:3784" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="4767:4828" ph="SELECT `id`,... users" />
           </folding>
         </state>
       </provider>
@@ -929,10 +961,10 @@
         <state relative-caret-position="1751">
           <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
           <folding>
-            <element signature="e#2283#2292#0" expanded="true" />
-            <marker date="1484239440947" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="2436:2533" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="3789:3899" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="2408:2505" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="3674:3784" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="4767:4828" ph="SELECT `id`,... users" />
           </folding>
         </state>
       </provider>
@@ -974,10 +1006,10 @@
         <state relative-caret-position="1751">
           <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
           <folding>
-            <element signature="e#2283#2292#0" expanded="true" />
-            <marker date="1484239440947" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="2436:2533" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="3789:3899" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="2408:2505" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="3674:3784" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="4767:4828" ph="SELECT `id`,... users" />
           </folding>
         </state>
       </provider>
@@ -1029,10 +1061,10 @@
         <state relative-caret-position="1751">
           <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
           <folding>
-            <element signature="e#2283#2292#0" expanded="true" />
-            <marker date="1484239440947" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="2436:2533" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="3789:3899" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="2408:2505" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="3674:3784" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="4767:4828" ph="SELECT `id`,... users" />
           </folding>
         </state>
       </provider>
@@ -1066,10 +1098,10 @@
         <state relative-caret-position="1768">
           <caret line="104" column="25" selection-start-line="104" selection-start-column="25" selection-end-line="104" selection-end-column="25" />
           <folding>
-            <element signature="e#2283#2292#0" expanded="true" />
-            <marker date="1484239440947" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="2436:2533" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="3789:3899" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="2408:2505" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="3674:3784" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="4767:4828" ph="SELECT `id`,... users" />
           </folding>
         </state>
       </provider>
@@ -1165,14 +1197,14 @@
       </provider>
     </entry>
     <entry file="dbDummy://dbtable:/45f26db/70ebc45e-0e23-427a-bc03-c79ac30321ef/webpoddb.episodes">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -1184,13 +1216,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/faces-config.xml">
+      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
-      </provider>
-      <provider editor-type-id="com.intellij.jsf.yfilesGraph.editor.FacesNavigationFileEditorProvider">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/WEB-INF/glassfish-web.xml">
@@ -1227,53 +1259,30 @@
         <state relative-caret-position="216">
           <caret line="20" column="0" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#414#423#0" expanded="true" />
-            <element signature="e#965#966#0" expanded="true" />
-            <element signature="e#995#996#0" expanded="true" />
-            <element signature="e#1052#1053#0" expanded="true" />
-            <element signature="e#1090#1091#0" expanded="true" />
-            <element signature="e#1126#1127#0" expanded="true" />
-            <element signature="e#1154#1155#0" expanded="true" />
-            <element signature="e#1189#1190#0" expanded="true" />
-            <element signature="e#1216#1217#0" expanded="true" />
-            <element signature="e#1258#1259#0" expanded="true" />
-            <element signature="e#1292#1293#0" expanded="true" />
-            <element signature="e#1331#1332#0" expanded="true" />
-            <element signature="e#1362#1363#0" expanded="true" />
-            <element signature="e#1402#1403#0" expanded="true" />
-            <element signature="e#1434#1435#0" expanded="true" />
-            <element signature="e#1472#1473#0" expanded="true" />
-            <element signature="e#1502#1503#0" expanded="true" />
-            <element signature="e#1539#1540#0" expanded="true" />
-            <element signature="e#1568#1569#0" expanded="true" />
-            <element signature="e#1609#1610#0" expanded="true" />
-            <element signature="e#1642#1643#0" expanded="true" />
-            <element signature="e#1687#1688#0" expanded="true" />
-            <element signature="e#1724#1725#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Model/MySQLConn.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="89" column="0" selection-start-line="89" selection-start-column="0" selection-end-line="89" selection-end-column="0" />
-          <folding>
-            <element signature="e#2283#2292#0" expanded="true" />
-            <marker date="1484239440947" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="2436:2533" ph="SELECT `id`,... episodes" />
-            <marker date="1484239440947" expanded="true" signature="3789:3899" ph="SELECT `id`,... episodes" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Logic/Utilities.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="49" selection-start-line="9" selection-start-column="49" selection-end-line="9" selection-end-column="49" />
-          <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#414#423#0" expanded="false" />
+            <element signature="e#965#966#0" expanded="false" />
+            <element signature="e#995#996#0" expanded="false" />
+            <element signature="e#1052#1053#0" expanded="false" />
+            <element signature="e#1090#1091#0" expanded="false" />
+            <element signature="e#1126#1127#0" expanded="false" />
+            <element signature="e#1154#1155#0" expanded="false" />
+            <element signature="e#1189#1190#0" expanded="false" />
+            <element signature="e#1216#1217#0" expanded="false" />
+            <element signature="e#1258#1259#0" expanded="false" />
+            <element signature="e#1292#1293#0" expanded="false" />
+            <element signature="e#1331#1332#0" expanded="false" />
+            <element signature="e#1362#1363#0" expanded="false" />
+            <element signature="e#1402#1403#0" expanded="false" />
+            <element signature="e#1434#1435#0" expanded="false" />
+            <element signature="e#1472#1473#0" expanded="false" />
+            <element signature="e#1502#1503#0" expanded="false" />
+            <element signature="e#1539#1540#0" expanded="false" />
+            <element signature="e#1568#1569#0" expanded="false" />
+            <element signature="e#1609#1610#0" expanded="false" />
+            <element signature="e#1642#1643#0" expanded="false" />
+            <element signature="e#1687#1688#0" expanded="false" />
+            <element signature="e#1724#1725#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1283,7 +1292,7 @@
         <state relative-caret-position="-22">
           <caret line="34" column="92" selection-start-line="34" selection-start-column="76" selection-end-line="34" selection-end-column="92" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1296,18 +1305,56 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+    <entry file="file://$PROJECT_DIR$/src/Model/User.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="29" column="29" selection-start-line="29" selection-start-column="29" selection-end-line="29" selection-end-column="29" />
-          <folding />
+        <state relative-caret-position="371">
+          <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+          <folding>
+            <element signature="e#328#329#0" expanded="true" />
+            <element signature="e#359#360#0" expanded="true" />
+            <element signature="e#398#399#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#463#464#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Logic/Utilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="17">
+          <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Model/MySQLConn.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="178" column="58" selection-start-line="178" selection-start-column="58" selection-end-line="178" selection-end-column="58" />
+          <folding>
+            <marker date="1484495078205" expanded="true" signature="1174:1271" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="2408:2505" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="3674:3784" ph="SELECT `id`,... episodes" />
+            <marker date="1484495078205" expanded="true" signature="4767:4828" ph="SELECT `id`,... users" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/web/index.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
+        <state relative-caret-position="17">
           <caret line="141" column="36" selection-start-line="141" selection-start-column="36" selection-end-line="141" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-924">
+          <caret line="43" column="162" selection-start-line="43" selection-start-column="162" selection-end-line="43" selection-end-column="162" />
           <folding />
         </state>
       </provider>

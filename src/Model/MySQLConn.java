@@ -51,14 +51,16 @@ public class MySQLConn
             stmt = conn.prepareStatement("SELECT `id`, `name`, `description`, `posted_on` FROM `episodes` ORDER BY `posted_on` DESC LIMIT 1;");
 
             ResultSet rs = stmt.executeQuery();
-            rs.next();
 
-            int id = rs.getInt("id");
-            String name = rs.getString("name");
-            String desc = rs.getString("description");
-            Date date = rs.getTimestamp("posted_on");
+            if(rs.next() == true)
+            {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String desc = rs.getString("description");
+                Date date = rs.getTimestamp("posted_on");
 
-            episode = new Episode(id, name, desc, date);
+                episode = new Episode(id, name, desc, date);
+            }
 
             rs.close();
             stmt.close();
@@ -68,14 +70,11 @@ public class MySQLConn
             se.printStackTrace();
         } finally
         {
-            //finally block used to close resources
             try
             {
                 if (stmt != null) stmt.close();
-            } catch (SQLException e)
-            {
-            }// nothing we can do
-        }//end try
+            } catch (SQLException e){e.printStackTrace();}
+        }
         System.out.println("Retrieved latest episode.");
         return episode;
     }
@@ -111,14 +110,11 @@ public class MySQLConn
             se.printStackTrace();
         } finally
         {
-            //finally block used to close resources
             try
             {
                 if (stmt != null) stmt.close();
-            } catch (SQLException e)
-            {
-            }// nothing we can do
-        }//end try
+            } catch (SQLException e){e.printStackTrace();}
+        }
         System.out.println("Retrieved latest "+ numberOfEpisodes +" episodes.");
         return episodes;
     }
@@ -151,15 +147,52 @@ public class MySQLConn
             se.printStackTrace();
         } finally
         {
-            //finally block used to close resources
             try
             {
                 if (stmt != null) stmt.close();
-            } catch (SQLException e)
-            {
-            }// nothing we can do
-        }//end try
+            } catch (SQLException e){e.printStackTrace();}
+        }
         System.out.println("Retrieved episode.");
         return episode;
+    }
+
+    public User CheckUser(User uToCheck)
+    {
+        PreparedStatement stmt = null;
+        User result = null;
+
+        try
+        {
+            System.out.println("Creating statement...");
+            stmt = conn.prepareStatement("SELECT `id`, `name`, `passHash` FROM `users` WHERE `name` = ? ;");
+            stmt.setString(1, uToCheck.getUserName());
+            ResultSet rs = stmt.executeQuery();
+
+            if(rs.next() == true) //Check if such a user exists.
+            {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                String passHash = rs.getString("passHash");
+
+                if (name.equals(uToCheck.getUserName()) && passHash.equals(uToCheck.getPassHash()))
+                {
+                    result = new User(name, passHash, id);
+                }
+            }
+            rs.close();
+            stmt.close();
+        } catch (SQLException se)
+        {
+            //Handle errors for JDBC
+            se.printStackTrace();
+        } finally
+        {
+            try
+            {
+                if (stmt != null) stmt.close();
+            } catch (SQLException e){e.printStackTrace();}
+        }
+
+        return result;
     }
 }
