@@ -38,6 +38,55 @@
 
         http.send(params);
     }
+
+    function getParameterByName(name, url) {
+        if (!url) {
+            url = window.location.href;
+        }
+        name = name.replace(/[\[\]]/g, "\\$&");
+        var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                results = regex.exec(url);
+        if (!results) return null;
+        if (!results[2]) return '';
+        return decodeURIComponent(results[2].replace(/\+/g, " "));
+    }
+
+    function removeURLParameter( parameter) {
+        var url = window.location.href;
+        var urlparts= url.split('?');
+        if (urlparts.length>=2) {
+
+            var prefix= encodeURIComponent(parameter)+'=';
+            var pars= urlparts[1].split(/[&;]/g);
+
+            //reverse iteration as may be destructive
+            for (var i= pars.length; i-- > 0;) {
+                //idiom for string.startsWith
+                if (pars[i].lastIndexOf(prefix, 0) !== -1) {
+                    pars.splice(i, 1);
+                }
+            }
+
+            url= urlparts[0] + (pars.length > 0 ? '?' + pars.join('&') : "");
+        }
+        window.history.pushState("", "", url);
+    }
+
+    window.onload = function DisplayMessage() {
+        var message = getParameterByName("message", null);
+        if(message == null || message == '') return;
+        else if(message == 'valid')
+        {
+            document.getElementById("MessageLabel").innerText = 'You have been logged in successfully!';
+            document.getElementById("MessageDialog").style.display='block';
+        }
+        else if(message == 'invalid')
+        {
+            document.getElementById("MessageLabel").innerText = 'The login credentials you have entered are wrong!';
+            document.getElementById("MessageDialog").style.display='block';
+        }
+        removeURLParameter("message");
+    }
 </script>
 
 <div id="LoginDialog" class="modal">
@@ -54,4 +103,16 @@
             <button type="button" onclick="document.getElementById('LoginDialog').style.display='none'" class="cancelbtn">Cancel</button>
         </div>
     </form>
+</div>
+
+<div id="MessageDialog" class="modal">
+    <span onclick="document.getElementById('MessageDialog').style.display='none'" class="close" title="Close">&times;</span>
+    <div class="modal-content animate">
+        <div class="form-button-container">
+            <label id="MessageLabel"><b>Username</b></label>
+        </div>
+        <div class="form-button-container">
+            <button type="button" onclick="document.getElementById('MessageDialog').style.display='none'" class="cancelbtn">OK</button>
+        </div>
+    </div>
 </div>
