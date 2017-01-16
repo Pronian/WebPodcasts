@@ -58,10 +58,8 @@
         <div class="episode-container">
             <div class="episode-info">
                 <div class="episode-row">
-                    <div class="episode-title"><h2><%= episode.getName() %>
-                    </h2></div>
-                    <div class="episode-date"><%= episode.getFormatedPostedOn() %>
-                    </div>
+                    <div class="episode-title"><h2><%= episode.getName() %></h2></div>
+                    <div class="episode-date"><%= episode.getFormatedPostedOn()%></div>
                 </div>
                 <div class="player-container">
                     <audio controls class="player">
@@ -70,8 +68,7 @@
                     </audio>
                 </div>
                 <div class="episode-row">
-                    <div class="episode-description"><%=episode.getDescription()%>
-                    </div>
+                    <div class="episode-description"><%=episode.getDescription()%></div>
                     <div class="share-buttons">
                         <span class='st_reddit_large' displayText='Reddit'></span>
                         <span class='st_facebook_large' displayText='Facebook'></span>
@@ -93,22 +90,13 @@
         <% for (Episode episode1 : episodes)
         {
             String addSelectedClass = " selected";
-            if (episode1.getId() != id)
-            {
-                addSelectedClass = "";
-            }
+            if (episode1.getId() != id) { addSelectedClass = ""; }
         %>
         <a href=<%="\"index.jsp?ep=" + episode1.getId() + "\""%>>
             <div class=<%= ("\"episodes-list-item" + addSelectedClass + "\"") %>>
-                <div class="small-title">
-                    <%=episode1.getName()%>
-                </div>
-                <div class="small-date">
-                    <%=episode1.getFormatedPostedOn()%>
-                </div>
-                <div class="small-description">
-                    <%=episode1.getDescription()%>
-                </div>
+                <div class="small-title"> <%=episode1.getName()%> </div>
+                <div class="small-date"> <%=episode1.getFormatedPostedOn()%> </div>
+                <div class="small-description"> <%=episode1.getDescription()%> </div>
             </div>
         </a>
         <% } %>
@@ -117,7 +105,7 @@
 <%@include file="footer.jsp"%>
 </body>
 <%
-    //    MySQLConn sqlconn = new MySQLConn();
+//    MySQLConn sqlconn = new MySQLConn();
 //    List<Episode> eps = sqlconn.getLatestEpisode(100);
 //    Date date = new Date();
 //    Feed feed = new Feed("The Car and Co-car NotCast", "", "A podcast about stuff", "en-US", "No right", Utilities.DateToPubDate(date), "John", "http://192.168.0.102:8080/Web_Podcasts_war_exploded/index.jsp?ep=", "http://192.168.0.102:8080/Web_Podcasts_war_exploded/");
