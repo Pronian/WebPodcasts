@@ -2,6 +2,7 @@ package Model;
 
 
 import java.sql.*;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Date;
 
@@ -12,6 +13,8 @@ public class MySQLConn
 
     static final String USER = "root";
     static final String PASS = "5904360";
+
+    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     private Connection conn;
 
@@ -47,7 +50,6 @@ public class MySQLConn
         Episode episode = null;
         try
         {
-            System.out.println("Creating statement...");
             stmt = conn.prepareStatement("SELECT `id`, `name`, `description`, `posted_on` FROM `episodes` ORDER BY `posted_on` DESC LIMIT 1;");
 
             ResultSet rs = stmt.executeQuery();
@@ -75,7 +77,6 @@ public class MySQLConn
                 if (stmt != null) stmt.close();
             } catch (SQLException e){e.printStackTrace();}
         }
-        System.out.println("Retrieved latest episode.");
         return episode;
     }
 
@@ -86,7 +87,6 @@ public class MySQLConn
         int i = 1;
         try
         {
-            System.out.println("Creating statement...");
             stmt = conn.prepareStatement("SELECT `id`, `name`, `description`, `posted_on` FROM `episodes` ORDER BY `posted_on` DESC LIMIT ? ;");
             stmt.setInt(i, numberOfEpisodes);
             ResultSet rs = stmt.executeQuery();
@@ -115,7 +115,6 @@ public class MySQLConn
                 if (stmt != null) stmt.close();
             } catch (SQLException e){e.printStackTrace();}
         }
-        System.out.println("Retrieved latest "+ numberOfEpisodes +" episodes.");
         return episodes;
     }
 
@@ -125,7 +124,6 @@ public class MySQLConn
         Episode episode = null;
         try
         {
-            System.out.println("Creating statement...");
             stmt = conn.prepareStatement("SELECT `id`, `name`, `description`, `posted_on` FROM `episodes` WHERE `id`=? ORDER BY `posted_on` DESC LIMIT 1;");
 
             stmt.setInt(1,id);
@@ -152,10 +150,14 @@ public class MySQLConn
                 if (stmt != null) stmt.close();
             } catch (SQLException e){e.printStackTrace();}
         }
-        System.out.println("Retrieved episode.");
         return episode;
     }
 
+    /**
+     * Checks if the user exists and has correct passHash.
+     * @param uToCheck The user that is to be checked.
+     * @return null if no such user or wrong pass, User object with correct id otherwise.
+     */
     public User CheckUser(User uToCheck)
     {
         PreparedStatement stmt = null;
@@ -194,5 +196,79 @@ public class MySQLConn
         }
 
         return result;
+    }
+
+    /**
+     * Adds podcast to episodes table.
+     * @param episodeName Episode name.
+     * @param description Podcast description.
+     * @param uploader The user who's adding it.
+     * @return The new podcast's id.
+     */
+    public int AddPodcast(String episodeName, String description, User uploader)
+    {
+        int resultPodId = 0;
+        int affectedRows = 0;
+        if(episodeName == null || description == null || uploader == null || episodeName.isEmpty() || description.isEmpty()) return resultPodId;
+
+        PreparedStatement stmt = null;
+        try
+        {
+            stmt = conn.prepareStatement("INSERT INTO `episodes` (`name`, `description`, `posted_by_user`) VALUES (?,?,?);");
+            stmt.setString(1,episodeName);
+            stmt.setString(2,description);;
+            stmt.setInt(3, uploader.getUserId());
+
+            affectedRows = stmt.executeUpdate();
+
+            stmt.close();
+        } catch (SQLException se)
+        {
+            //Handle errors for JDBC
+            se.printStackTrace();
+        } finally
+        {
+            try
+            {
+                if (stmt != null) stmt.close();
+            } catch (SQLException e){e.printStackTrace();}
+        }
+        if(affectedRows == 1)
+        {
+            resultPodId = getLatestEpisode().getId();
+        }
+        return resultPodId;
+    }
+
+    public Boolean DeleteLastEpisode()
+    {
+        Episode ep = getLatestEpisode();
+        int affectedRows = 0;
+
+        PreparedStatement stmt = null;
+        try
+        {
+            stmt = conn.prepareStatement("DELETE FROM `episodes` WHERE `id`=?;");
+            stmt.setInt(1, ep.getId());
+
+            affectedRows = stmt.executeUpdate();
+
+            stmt.close();
+        } catch (SQLException se)
+        {
+            //Handle errors for JDBC
+            se.printStackTrace();
+        } finally
+        {
+            try
+            {
+                if (stmt != null) stmt.close();
+            } catch (SQLException e){e.printStackTrace();}
+        }
+        if(affectedRows == 1)
+        {
+            return true;
+        }
+        return false;
     }
 }

@@ -105,12 +105,6 @@
 <%@include file="footer.jsp"%>
 </body>
 <%
-//    MySQLConn sqlconn = new MySQLConn();
-//    List<Episode> eps = sqlconn.getLatestEpisode(100);
-//    Date date = new Date();
-//    Feed feed = new Feed("The Car and Co-car NotCast", "", "A podcast about stuff", "en-US", "No right", Utilities.DateToPubDate(date), "John", "http://192.168.0.102:8080/Web_Podcasts_war_exploded/index.jsp?ep=", "http://192.168.0.102:8080/Web_Podcasts_war_exploded/");
-//    feed.setEntries(eps);
-//    PodcastRSSFeedWriter rssFeedWriter = new PodcastRSSFeedWriter(feed,"E:\\Downloads\\podfiles\\podfiles\\rss.xml");
-//    rssFeedWriter.write();
+//
 %>
 </html>

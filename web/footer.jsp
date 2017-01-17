@@ -1,7 +1,7 @@
 <%@ page import="Model.User" %>
 <div class="footer">
     <div class="footer-text">
-        Site design and back-end: Ivan Georgiev (ivangeorgiev4360@gmail.com)
+        Site design and back-end: ivangeorgiev4360@gmail.com
     </div>
     <% session = request.getSession(false);
         if (session == null || session.getAttribute("currentUser") == null) { %>
@@ -13,19 +13,20 @@
                 <a onclick="document.getElementById('UploadDialog').style.display='block'">Upload</a>
             </div>
             <div class="footer-text clickable">
-                <a onclick="postLogout();">Logout (<%=((User)session.getAttribute("currentUser")).getUserName()%>)</a>
+                <a onclick="post('upload','delete=last');">Delete Last Episode</a>
+            </div>
+            <div class="footer-text clickable">
+                <a onclick="post('login','logout=logout');">Logout (<%=((User)session.getAttribute("currentUser")).getUserName()%>)</a>
             </div>
         <% } %>
 </div>
 
 <script type="text/javascript">
-    function postLogout()
+    function post(page, params)
     {
         var http = new XMLHttpRequest();
 
-        var params = "logout=logout";
-
-        http.open("POST", "login", true);
+        http.open("POST", page, true);
 
         http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
 
@@ -93,9 +94,9 @@
     <span onclick="document.getElementById('LoginDialog').style.display='none'" class="close" title="Close">&times;</span>
     <form class="modal-content animate" action="login" method="post">
         <div class="form-container">
-            <label><b>Username</b></label><br/>
+            <label><b>Username:</b></label><br/>
             <input type="text" placeholder="Enter Username" name="uname" required><br/>
-            <label><b>Password</b></label><br/>
+            <label><b>Password:</b></label><br/>
             <input type="password" placeholder="Enter Password" name="pass" required><br/>
         </div>
         <div class="form-button-container">
@@ -115,4 +116,24 @@
             <button type="button" onclick="document.getElementById('MessageDialog').style.display='none'" class="cancelbtn">OK</button>
         </div>
     </div>
+</div>
+
+<div id="UploadDialog" class="modal">
+    <span onclick="document.getElementById('UploadDialog').style.display='none'" class="close" title="Close">&times;</span>
+    <form class="modal-content animate" action="upload" method="post" enctype="multipart/form-data">
+        <div class="form-container">
+            <label><b>Episode Name:</b></label>
+            <input type="text" placeholder="Episode Name" name="ename" required>
+            <label><b>Description:</b></label>
+            <input type="text" placeholder="Description" name="desc" required>
+            <label><b>Podcast image:</b></label>
+            <input type="file" name="imgFile" accept=".jpg" size="10" required>
+            <label><b>Podcast MP3:</b></label>
+            <input type="file" name="mp3File" accept=".mp3" size="400" required>
+        </div>
+        <div class="form-button-container">
+            <button type="submit">Upload</button>
+            <button type="button" onclick="document.getElementById('UploadDialog').style.display='none'" class="cancelbtn">Cancel</button>
+        </div>
+    </form>
 </div>

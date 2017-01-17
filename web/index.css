@@ -17,8 +17,6 @@ a:active{
     transform: scale(1.1);
 }
 
-
-
 .header-outer-container{
     box-shadow: 0 0 100px 5px #000 inset;
     background-size: 100%;
@@ -207,6 +205,9 @@ body{
         padding: 10px;
         font-size: 16px;
     }
+    .footer{
+        font-size: 9px;
+    }
     h2{
         font-size: 22px;
     }
@@ -288,7 +289,7 @@ button{
     border: none;
 }
 
-input {
+input[type="text"], input[type="password"] {
     box-sizing: content-box;
     padding: 10px 20px;
     border: 1px solid #b7b7b7;
@@ -299,10 +300,15 @@ input {
     box-shadow: 2px 2px 2px 0 rgba(0,0,0,0.2) inset;
     text-shadow: 1px 1px 1px rgba(15,15,20,0.1) ;
     transition: all 200ms cubic-bezier(0.42, 0, 0.58, 1);
+    margin: 10px 0;
 }
 
 input:focus{
     outline-color: orangered;
+}
+
+input[type="file"]{
+    margin: 10px 0;
 }
 
 ::-webkit-input-placeholder {
