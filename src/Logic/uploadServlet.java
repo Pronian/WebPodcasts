@@ -1,16 +1,11 @@
 package Logic;
 
-import Model.Episode;
-import Model.Feed;
-import Model.MySQLConn;
-import Model.User;
+import Model.*;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.MultipartConfig;
 import javax.servlet.http.*;
-import java.io.File;
 import java.io.InputStream;
-import java.nio.file.Files;
 import java.util.Date;
 import java.util.List;
 
@@ -53,13 +48,11 @@ public class uploadServlet extends HttpServlet
             response.sendRedirect("allepisodes.jsp");
 
             InputStream imgStream = imgPart.getInputStream();
-            File imgTarget = new File(filePath + podId + ".jpg");
-            Files.copy(imgStream,imgTarget.toPath());
+            FileWriter.WriteFileFromStream(imgStream, filePath + podId, ".jpg");
             if(imgStream != null) imgStream.close();
 
             InputStream mp3Stream = mp3Part.getInputStream();
-            File mp3Target = new File(filePath + podId + ".mp3");
-            Files.copy(mp3Stream, mp3Target.toPath());
+            FileWriter.WriteFileFromStream(mp3Stream, filePath + podId, ".mp3" );
             if(mp3Stream != null) mp3Stream.close();
 
             updateRSS(conn);

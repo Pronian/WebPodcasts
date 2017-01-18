@@ -1,5 +1,6 @@
-package Logic;
+package Model;
 
+import Logic.Utilities;
 import Model.Episode;
 import Model.Feed;
 
