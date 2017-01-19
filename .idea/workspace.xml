@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d878320f-2cb5-498d-825f-49c893078087" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Logic/uploadServlet.java" afterPath="$PROJECT_DIR$/src/Logic/uploadServlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/Episode.java" afterPath="$PROJECT_DIR$/src/Model/Episode.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Model/MySQLConn.java" afterPath="$PROJECT_DIR$/src/Model/MySQLConn.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web/index.jsp" afterPath="$PROJECT_DIR$/web/index.jsp" />
-    </list>
+    <list default="true" id="d878320f-2cb5-498d-825f-49c893078087" name="Default" comment="" />
     <ignored path="Web-Podcasts.iws" />
     <ignored path=".idea/workspace.xml" />
     <ignored path="$PROJECT_DIR$/out/" />
@@ -55,7 +50,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="web.xml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="web.xml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="782">
@@ -65,7 +60,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MySQLConn.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MySQLConn.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Model/MySQLConn.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="2975">
@@ -105,7 +100,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="E:/Installed Programs/glassfish4/glassfish/modules/javax.servlet-api.jar!/javax/servlet/http/HttpServlet.class" />
-        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/70ebc45e-0e23-427a-bc03-c79ac30321ef/console.sql" />
         <option value="$PROJECT_DIR$/web/WEB-INF/glassfish-web.xml" />
         <option value="$PROJECT_DIR$/web/clamp.js" />
@@ -126,6 +120,7 @@
         <option value="$PROJECT_DIR$/src/Logic/uploadServlet.java" />
         <option value="$PROJECT_DIR$/src/Model/MySQLConn.java" />
         <option value="$PROJECT_DIR$/web/index.jsp" />
+        <option value="$PROJECT_DIR$/.idea/workspace.xml" />
       </list>
     </option>
   </component>
@@ -263,6 +258,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="Logic" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web-Podcasts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Web-Podcasts" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value=".idea" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -722,7 +731,7 @@
       <method />
     </configuration>
     <configuration default="false" name="GlassFish 4.1.1" type="GlassfishConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="GlassFish 4.1.1" ALTERNATIVE_JRE_ENABLED="false">
-      <option name="OPEN_IN_BROWSER_URL" value="https://localhost:8080/Web_Podcasts_war_exploded/index.jsp" />
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/Web_Podcasts_war_exploded/index.jsp" />
       <deployment>
         <artifact name="Web-Podcasts:war exploded">
           <settings />
@@ -818,12 +827,12 @@
       <workItem from="1484227065987" duration="28782000" />
       <workItem from="1484310631017" duration="22719000" />
       <workItem from="1484402317888" duration="49123000" />
-      <workItem from="1484741262019" duration="16174000" />
+      <workItem from="1484741262019" duration="16814000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="141864000" />
+    <option name="totallyTimeSpent" value="142504000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -836,7 +845,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1874" height="1096" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -852,7 +861,7 @@
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.111907385" sideWeight="0.49594322" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.15270121" sideWeight="0.49594322" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18083961" sideWeight="0.5040568" order="4" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19680265" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32917964" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1136,13 +1145,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="483">
-          <caret line="687" column="49" selection-start-line="687" selection-start-column="49" selection-end-line="687" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
     <entry file="dbDummy://dbtable:/45f26db/70ebc45e-0e23-427a-bc03-c79ac30321ef/webpoddb.episodes">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1295,14 +1297,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="782">
-          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Model/PodcastRSSFeedWriter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-51">
@@ -1349,6 +1343,22 @@
             <marker date="1484763226860" expanded="true" signature="5291:5370" ph="INSERT INTO `episodes`... " />
             <marker date="1484763226860" expanded="true" signature="6237:6272" ph="DELETE FROM " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="719" column="52" selection-start-line="719" selection-start-column="52" selection-end-line="719" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web/WEB-INF/web.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="782">
+          <caret line="46" column="22" selection-start-line="46" selection-start-column="22" selection-end-line="46" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
