@@ -14,9 +14,7 @@
         {
             id = Integer.parseInt(sParamEp);
             episode = conn.getEpisode(id);
-        } catch (NumberFormatException e)
-        {
-        }
+        } catch (NumberFormatException e) { id = -1;}
     }
     if (episode == null)
     {

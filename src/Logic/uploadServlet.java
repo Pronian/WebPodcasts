@@ -42,7 +42,7 @@ public class uploadServlet extends HttpServlet
             if( epName == null || desc == null || epName.isEmpty()
                     || desc.isEmpty() || imgPart == null || mp3Part == null) {conn.CloseConnection(); return;}
 
-            int podId = conn.AddPodcast(epName, desc, user);
+            int podId = conn.AddEpisode(epName, desc, user);
             if(podId == 0 ) {conn.CloseConnection(); return;}
 
             response.sendRedirect("allepisodes.jsp");

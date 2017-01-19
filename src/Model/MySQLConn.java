@@ -1,8 +1,6 @@
 package Model;
 
-
 import java.sql.*;
-import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.Date;
 
@@ -13,8 +11,6 @@ public class MySQLConn
 
     static final String USER = "root";
     static final String PASS = "5904360";
-
-    private static final SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
 
     private Connection conn;
 
@@ -46,38 +42,7 @@ public class MySQLConn
 
     public Episode getLatestEpisode()
     {
-        PreparedStatement stmt = null;
-        Episode episode = null;
-        try
-        {
-            stmt = conn.prepareStatement("SELECT `id`, `name`, `description`, `posted_on` FROM `episodes` ORDER BY `posted_on` DESC LIMIT 1;");
-
-            ResultSet rs = stmt.executeQuery();
-
-            if(rs.next() == true)
-            {
-                int id = rs.getInt("id");
-                String name = rs.getString("name");
-                String desc = rs.getString("description");
-                Date date = rs.getTimestamp("posted_on");
-
-                episode = new Episode(id, name, desc, date);
-            }
-
-            rs.close();
-            stmt.close();
-        } catch (SQLException se)
-        {
-            //Handle errors for JDBC
-            se.printStackTrace();
-        } finally
-        {
-            try
-            {
-                if (stmt != null) stmt.close();
-            } catch (SQLException e){e.printStackTrace();}
-        }
-        return episode;
+        return getLatestEpisode(1).get(0);
     }
 
     public ArrayList<Episode> getLatestEpisode(int numberOfEpisodes)
@@ -205,7 +170,7 @@ public class MySQLConn
      * @param uploader The user who's adding it.
      * @return The new podcast's id.
      */
-    public int AddPodcast(String episodeName, String description, User uploader)
+    public int AddEpisode(String episodeName, String description, User uploader)
     {
         int resultPodId = 0;
         int affectedRows = 0;
@@ -216,7 +181,7 @@ public class MySQLConn
         {
             stmt = conn.prepareStatement("INSERT INTO `episodes` (`name`, `description`, `posted_by_user`) VALUES (?,?,?);");
             stmt.setString(1,episodeName);
-            stmt.setString(2,description);;
+            stmt.setString(2,description);
             stmt.setInt(3, uploader.getUserId());
 
             affectedRows = stmt.executeUpdate();
